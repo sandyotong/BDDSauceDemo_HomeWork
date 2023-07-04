@@ -23,17 +23,17 @@ public class CheckOutOverviewStep {
         Assert.assertTrue(checkoutView.VerifyCheckOutOverviewPage());
     }
 
-    @When("User verifies the total price of item is \"([^\"]*)\"")
+    @When("User verify the total price of item is \"([^\"]*)\"")
     public void userVerifiesTheTotalPriceOfItemIs(String expectedPrice) throws Throwable {
-        CheckOutOverviewPage checkoutView = new CheckOutOverviewPage(webDriver);
-        String actualPrice = checkoutView.getTotalPrice();
+        CheckOutOverviewPage checkoutViewPage = new CheckOutOverviewPage(webDriver);
+        String actualPrice = checkoutViewPage.getTotalPrice();
         Assert.assertEquals(Double.parseDouble(expectedPrice), Double.parseDouble(actualPrice), 0.01);
     }
 
     @Then("User click finish button")
     public void clickFinishButton() throws InterruptedException {
-        CheckOutOverviewPage chekoutView = new CheckOutOverviewPage(webDriver);
-        chekoutView.clickFinishBtn();
+        CheckOutOverviewPage chekoutViewPage = new CheckOutOverviewPage(webDriver);
+        chekoutViewPage.clickFinishBtn();
     }
 
     @And("User already on checkout: complete! page")

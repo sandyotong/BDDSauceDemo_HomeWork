@@ -45,7 +45,7 @@ public class SalesSteps {
 
     }
 
-    @Then("User click shopping_cart_link")
+    @Then("User click shopping cart link")
     public void userClickShopping_cart_link() throws InterruptedException {
         SalesPage salesPage = new SalesPage(webDriver);
         salesPage.shoppingCartLink();

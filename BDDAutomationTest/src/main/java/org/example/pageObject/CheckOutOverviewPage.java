@@ -21,6 +21,12 @@ public class CheckOutOverviewPage {
     @FindBy(xpath = "//div[@class='summary_info_label summary_total_label']")
     private WebElement verifyTotalPrice;
 
+    @FindBy(xpath = "//div[@class='summary_subtotal_label']")
+    private WebElement verifyPrice;
+
+    @FindBy(xpath = "//div[@class='summary_tax_label']")
+    private WebElement taxLabel;
+
     @FindBy(xpath = "//button[@id='finish']")
     private WebElement finishBtn;
 

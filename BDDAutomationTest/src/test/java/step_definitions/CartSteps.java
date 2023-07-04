@@ -24,7 +24,7 @@ public class CartSteps {
 
     }
 
-    @When("User Remove item from the cart page \"(.*)\"")
+    @When("User remove item from the cart page \"(.*)\"")
     public void ProductClick(String removeProduct) throws InterruptedException {
         CartPage cartPage = new CartPage(webDriver);
         cartPage.ClickProduct(removeProduct);
@@ -42,7 +42,7 @@ public class CartSteps {
         cartPage.VerifyPrice();
     }
 
-    @Then("User click checkout button")
+    @When("User click checkout button")
     public void clickCheckout(){
         CartPage cartPage = new CartPage(webDriver);
         cartPage.clickCheckout();
